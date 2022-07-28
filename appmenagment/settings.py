@@ -96,14 +96,20 @@ SITE_ID = 1
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'employe',
+#         'USER': 'admin',
+#         'PASSWORD': '124252',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5433',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'employe',
-        'USER': 'admin',
-        'PASSWORD': '124252',
-        'HOST': '127.0.0.1',
-        'PORT': '5433',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
