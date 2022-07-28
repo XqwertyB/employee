@@ -92,7 +92,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'appmenagment.wsgi.application'
 
-
+SITE_ID = 1
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
@@ -125,7 +125,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+CORS_ALLOW_ALL_ORIGINS = True
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
