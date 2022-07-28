@@ -21,11 +21,6 @@ class Task(models.Model):
 
 
 
-
-
-
-
-
 class usertyp(models.Model):
     type = models.CharField('Foydalanuvchi turi', max_length=50)
 
@@ -60,6 +55,3 @@ class Images(models.Model):
 
 
 
-class Auth(models.Model):
-    username1 = models.CharField(max_length=100)
-    password1 = models.CharField(max_length=100)

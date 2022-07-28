@@ -5,10 +5,9 @@ from django.shortcuts import render
 
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from social_core.backends import username
-from social_core.backends import username1
 
-from .models import Typ, Task, Taskcontroll, Person, Images, usertyp, Auth
+
+from .models import Typ, Task, Taskcontroll, Person, Images, usertyp
 from group_order.models import group_emp, costumer, order, order_detail
 
 from .serializers import (
@@ -21,8 +20,7 @@ UsertypList,
 Group_empList,
 CostumerList,
 OrderList,
-Order_detailList,
-AuthList
+Order_detailList
 )
 
 class TypeView(APIView):
@@ -63,12 +61,7 @@ class PersonView(APIView):
      except:
          return Response({"errors": "Hatolik bor"})
 
-class Auth(APIView):
-    def post(self, request):
-        auth = Auth.objects.all()
-        serializer = AuthList(auth, many=True)
-        run = True
-        if run:[username == username1]
+
 
 
 
