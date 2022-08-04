@@ -4,7 +4,6 @@ from person import views
 urlpatterns = [
     path('typ/', views.TypeView.as_view(),),
     path('task/', views.TaskView.as_view(),),
-    path('taskcontroll/', views.TaskcontrollView.as_view(),),
     path('person/', views.PersonView.as_view(),),
     path('img/', views.ImagesView.as_view(),),
     path('usertyp/', views.UsertypView.as_view(),),
