@@ -1,9 +1,9 @@
 from django.db import models
-from person.models import Taskcontroll
+from person.models import Task
 from person.models import Person
 
 class group_emp(models.Model):
-    taskcon = models.ForeignKey(Taskcontroll, models.SET_NULL, blank=True, null=True,)
+    taskcon = models.ForeignKey(Task, models.SET_NULL, blank=True, null=True,)
     person = models.ForeignKey(Person, models.SET_NULL, blank=True, null=True,)
 
     def __str__(self):
@@ -26,5 +26,5 @@ class order(models.Model):
 
 class order_detail(models.Model):
     order_id = models.ForeignKey(order, on_delete=models.CASCADE)
-    taskcontrol_id = models.ForeignKey(Taskcontroll, on_delete=models.CASCADE)
+    taskcontrol_id = models.ForeignKey(Task, on_delete=models.CASCADE)
     quanty = models.IntegerField(null=True)
