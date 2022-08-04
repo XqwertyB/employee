@@ -3,13 +3,12 @@ from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from .models import Typ, Task, Taskcontroll, Person, Images, usertyp
+from .models import Typ, Task,  Person, Images, usertyp
 from group_order.models import group_emp, costumer, order, order_detail
 
 from .serializers import (
 TypeList,
 TaskList,
-TaskcontrollList,
 PersonList,
 ImagesList,
 UsertypList,
@@ -38,15 +37,6 @@ class TaskView(APIView):
      except:
          return Response({"errors": "Hatolik bor"})
 
-
-class TaskcontrollView(APIView):
-   def get(self, request):
-     try:
-         taskcon = Taskcontroll.objects.all()
-         serializer = TaskcontrollList(taskcon, many=True)
-         return Response(serializer.data)
-     except:
-         return Response({"errors": "Hatolik bor"})
 
 class PersonView(APIView):
    def get(self, request):
