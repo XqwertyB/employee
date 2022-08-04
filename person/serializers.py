@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Typ, Task, Taskcontroll, Person, Images, usertyp
+from .models import Typ, Task,  Person, Images, usertyp
 from group_order.models import group_emp, costumer, order, order_detail
 
 class TypeList(serializers.ModelSerializer):
@@ -12,10 +12,6 @@ class TaskList(serializers.ModelSerializer):
         model = Task
         fields ='__all__'
 
-class TaskcontrollList(serializers.ModelSerializer):
-    class Meta:
-        model = Taskcontroll
-        fields ='__all__'
 
 class PersonList(serializers.ModelSerializer):
     class Meta:
