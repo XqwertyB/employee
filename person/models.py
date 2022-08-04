@@ -4,20 +4,19 @@ from django.utils.datetime_safe import datetime
 
 
 class Typ(models.Model):
-    type = models.CharField(max_length=200)
+    type = models.CharField('Vazifa turi', max_length=200)
 
     def __str__(self):
         return self.type
 
 
 class Task(models.Model):
-    name = models.CharField(max_length=100)
-    info = models.TextField()
-    type = models.ForeignKey(Typ, on_delete=models.CASCADE)
+    name = models.CharField('Vazifa nomi', max_length=100)
+    info = models.TextField('Tuliq malumot')
+    type = models.ForeignKey(Typ, on_delete=models.CASCADE )
     data = models.DateTimeField('Ajratilgan vaqt', default=datetime.now)
     status = models.BooleanField('Tugatilgan', default=False)
     status_task = models.BooleanField('Uz vaqtida tugatilgan', default=False)
-
 
     def __str__(self):
         return self.name
@@ -39,12 +38,14 @@ class Person(models.Model):
     tel = models.CharField('Tel Raqam', max_length=13)
     role = models.ForeignKey(usertyp,  on_delete=models.SET_NULL, null=True)
     status = models.BooleanField('Status', default=False)
-    task = models.ManyToManyField('Vazifalar', Task, )
+    task = models.ManyToManyField(Task,)
 
 
 
     def __str__(self):
         return self.username
+
+
 
 
 

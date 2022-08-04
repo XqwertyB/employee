@@ -13,6 +13,7 @@ class TaskList(serializers.ModelSerializer):
         fields ='__all__'
 
 
+
 class PersonList(serializers.ModelSerializer):
     class Meta:
         model = Person

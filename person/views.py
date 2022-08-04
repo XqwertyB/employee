@@ -38,6 +38,8 @@ class TaskView(APIView):
          return Response({"errors": "Hatolik bor"})
 
 
+
+
 class PersonView(APIView):
    def get(self, request):
      try:
